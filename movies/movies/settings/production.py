@@ -1,6 +1,8 @@
 from . import *
 
-DEBUG = True    # FIXME
+DEBUG = os.getenv('DJANGO_DEBUG') == '1'
+
+ALLOWED_HOSTS = ['*']   # FIXME
 
 import dj_database_url
 
